@@ -1,8 +1,15 @@
 import React from 'react'
-
-const ButtonCompra = ({ texto }) => {
+import style from "../../../styleModule/button.module.css/button.module.css"
+const ButtonCompra = () => {
           return (
-                    <button>{texto}</button>
+                    <div style={{
+                              display: "flex",
+
+
+                    }}>
+
+                              <button className={style.buttonComprar}>Comprar</button>
+                    </div>
           )
 }
 

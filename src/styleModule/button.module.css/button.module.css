@@ -1,0 +1,76 @@
+.buttonCarrinho{
+          margin: 5px;
+          padding: 7px;
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+          text-decoration: none;
+          font-size: 15px;
+          gap: 5px;
+          border: none;
+          border-radius: 6px;
+          background: rgb(200, 41, 41);
+          color: #E8E3E3;
+          cursor: pointer;
+}
+.buttonCarrinho:hover{
+        
+          background: rgb(216, 97, 97);
+          color: #000000;
+}
+
+
+
+/* CSS */
+.buttonComprar {
+
+ 
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display:flex;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.buttonComprar:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.buttonComprar:hover {
+  background-color: #2c974b;
+}
+
+.buttonComprar:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.buttonComprar:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.buttonComprar:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}

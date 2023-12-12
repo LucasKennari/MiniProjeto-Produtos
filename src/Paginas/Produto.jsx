@@ -2,6 +2,8 @@ import React from 'react'
 import useFetch from '../hooks/useFetch'
 import { useParams } from 'react-router-dom'
 import ButtonCompra from '../componentes/PaginaProd/buttonCompra/ButtonCompra'
+import ButtonCarrinho from '../componentes/PaginaProd/buttonCarrinho/ButtonCarrinho'
+import ImgSlide from '../componentes/PaginaProd/imgSlide/ImgSlide'
 
 const Produto = () => {
           const params = useParams()
@@ -16,9 +18,30 @@ const Produto = () => {
 
           // }, [request])
           return (
-                    <div>
-                              <ButtonCompra texto={"Compra"} />
+                    <> <div style={{
+                              display: "flex",
+                              padding: "0px 50px 0px 50px",
+                              gap: "40px",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              border: "4px solid #429300"
+                    }}>
+
+                              <ImgSlide />
+
+                              <div style={{
+                                        display: "flex",
+                                        justifyContent: "flex-end",
+                                        alignItems: "center",
+
+                                        border: "1px solid #7443CA"
+                              }}>
+                                        <ButtonCompra />
+                                        <ButtonCarrinho />
+                              </div>
+
                     </div>
+                    </>
           )
 }
 
