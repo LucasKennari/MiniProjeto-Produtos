@@ -5,7 +5,7 @@ const ImgProduto = ({ img, produto }) => {
           const navigate = useNavigate()
           function handleClick(e) {
                     console.log("vc clicou", produto)
-                    navigate(produto)
+                    navigate(`/produto/${produto}`)
           }
           return (
                     <button className={style.buttonImg} onClick={handleClick}>
