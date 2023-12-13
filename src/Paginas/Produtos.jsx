@@ -3,7 +3,7 @@ import Card from '../componentes/produtos/card/Card'
 import useFetch from '../hooks/useFetch'
 import style from "../styleModule/style.module.css"
 //repsonsavel por fazer o fatch e mostrar os produtos
-
+import Loading from "../componentes/loading/Loading"
 const Produtos = () => {
 
 
@@ -20,7 +20,7 @@ const Produtos = () => {
 
 
 
-          if (loading) return (<>Loading</>)
+          if (loading) return (<Loading />)
 
           if (error) return (
                     <>
