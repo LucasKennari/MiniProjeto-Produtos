@@ -7,9 +7,12 @@ import ImgSlide from '../componentes/PaginaProd/imgSlide/ImgSlide'
 import Loading from '../componentes/loading/Loading'
 import DescricaoComp from '../componentes/PaginaProd/descricaoComponente/DescricaoComp'
 import PrecoComp from '../componentes/PaginaProd/PrecoComponente/PrecoComp'
+import TituloProdComp from '../componentes/PaginaProd/TituloProdComp/TituloProdComp'
+import Head from '../hooks/Head'
 
 const Produto = () => {
           const params = useParams()
+
 
           const { data, error, loading, request } = useFetch()
           React.useEffect(() => {
@@ -31,46 +34,49 @@ const Produto = () => {
 
           if (data) {
                     return (
-                              <> <div style={{
-                                        display: "flex",
-                                        padding: "0px 50px 0px 50px",
-                                        gap: "40px",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        border: "4px solid #429300"
-                              }}>
-                                        <ImgSlide img={data.fotos[0].src} />
-
+                              <>
+                                        <Head title={`Produto | ${data.nome}`} />
                                         <div style={{
-                                                  gap: "20px",
-                                                  display: "grid",
-                                                  padding: "20px",
-                                                  justifyItems: "center"
+                                                  display: "flex",
+                                                  padding: "0px 400px",
+                                                  gap: "40px",
+                                                  alignItems: "center",
+                                                  justifyContent: "center",
+
                                         }}>
-                                                  <div style={{
-                                                            display: "flex", flexWrap: 'wrap',
-
-                                                            border: "1px solid #429300"
-                                                  }}>
-                                                            <h2>{data.nome}</h2>
-                                                            <DescricaoComp texto={data.descricao} />
-                                                            <PrecoComp preco={data.preco} />
-                                                  </div>
+                                                  <ImgSlide img={data.fotos[0].src} />
 
                                                   <div style={{
-                                                            display: "flex",
-                                                            justifyContent: "flex-end",
-                                                            alignItems: "center",
-
-                                                            border: "1px solid #7443CA"
+                                                            gap: "20px",
+                                                            display: "grid",
+                                                            padding: "10px",
+                                                            justifyItems: "start"
                                                   }}>
-                                                            <ButtonCompra />
-                                                            <ButtonCarrinho />
+                                                            <div style={{
+                                                                      display: "flex", flexWrap: 'wrap',
+
+
+                                                            }}>
+                                                                      <TituloProdComp texto={data.nome} />
+                                                                      <DescricaoComp texto={data.descricao} />
+                                                                      <PrecoComp preco={data.preco} />
+                                                            </div>
+
+                                                            <div style={{
+                                                                      display: "flex",
+                                                                      justifyContent: "flex-end",
+                                                                      alignItems: "center",
+
+
+                                                            }}>
+                                                                      <ButtonCompra />
+                                                                      <ButtonCarrinho />
+                                                            </div>
+
                                                   </div>
+
 
                                         </div>
-
-                              </div>
                               </>
                     )
           }

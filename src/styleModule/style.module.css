@@ -5,6 +5,7 @@
           gap: 20px;
           padding: 10px;
           margin: 10px;
+          margin-top: 50px;
 
 
           text-decoration: none;
@@ -19,16 +20,14 @@
 .display{
           display: flex;
           justify-content:center;
-          border: 1px solid chocolate;
 }
 .display2{
           display: flex;
          justify-items: center;
-          border: 1px solid #0af60e;
+      
 }
 .card{
 
-border: 10px solid #0af60e;
          
 }
 
@@ -36,9 +35,11 @@ border: 10px solid #0af60e;
 .imgProduto{
           display: flex;
           justify-content: center;
+
+
           width: 200px;
           border-radius: 10px;
-       margin: 10px;
+     
 }
 .imgProduto:hover{
           cursor: pointer;
@@ -69,7 +70,7 @@ h3{
           align-items: center;
           justify-items:center;
 
-          border: 2px solid #4140E0;
+         
 
 }
 .buttonImg{

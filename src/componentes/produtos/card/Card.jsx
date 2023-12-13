@@ -7,9 +7,7 @@ const Card = ({ texto, img, produto }) => {
           return (
                     <div
                               className={style.card}
-                              style={{
-                                        border: "1px solid #EA28D6"
-                              }}>
+                    >
 
                               <ImgProduto img={img} produto={produto} />
                               <Titulo texto={texto} />

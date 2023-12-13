@@ -4,6 +4,7 @@ import useFetch from '../hooks/useFetch'
 import style from "../styleModule/style.module.css"
 //repsonsavel por fazer o fatch e mostrar os produtos
 import Loading from "../componentes/loading/Loading"
+import Head from '../hooks/Head'
 const Produtos = () => {
 
 
@@ -30,27 +31,31 @@ const Produtos = () => {
           if (data) {
 
                     return (
-                              <div
-                                        className={style.containerProd}>
+                              <>
+                                        <Head title="Produtos" />
+                                        <div
+                                                  className={style.containerProd}>
 
-                                        {data.map((item) => {
-                                                  return (
-                                                            <ul key={item.id}>
+                                                  {
 
-                                                                      <Card texto={item.nome}
-                                                                                img={item.fotos[0].src}
-                                                                                produto={item.id}
-                                                                      />
+                                                            data.map((item) => {
+                                                                      return (
+                                                                                <ul key={item.id}>
 
-                                                            </ul>
+                                                                                          <Card texto={item.nome}
+                                                                                                    img={item.fotos[0].src}
+                                                                                                    produto={item.id}
+                                                                                          />
+
+                                                                                </ul>
 
 
-                                                  )
+                                                                      )
 
-                                        })
-                                        }
-                              </div >
-
+                                                            })
+                                                  }
+                                        </div >
+                              </>
                     )
 
           }

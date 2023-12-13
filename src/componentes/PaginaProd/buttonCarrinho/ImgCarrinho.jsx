@@ -6,7 +6,7 @@ const imgCarrinho = ({ img }) => {
                     <img src={img} alt="carrinho"
                               style={{
                                         width: "20px",
-                                        color: " #fff "
+
                               }} />
 
           )

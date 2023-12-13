@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 const ImgProduto = ({ img, produto }) => {
           const navigate = useNavigate()
           function handleClick(e) {
-                    console.log("vc clicou", produto)
+
                     navigate(`/produto/${produto}`)
           }
           return (
