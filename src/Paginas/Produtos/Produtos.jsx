@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
-import Card from '../componentes/produtos/card/Card'
-import useFetch from '../hooks/useFetch'
-import style from "../styleModule/style.module.css"
-//repsonsavel por fazer o fatch e mostrar os produtos
-import Loading from "../componentes/loading/Loading"
-import Head from '../hooks/Head'
+import useFetch from '../../hooks/useFetch'
+
+import style from "./produtos.module.css"
+import '../../App.css'
+
+import Card from '../../componentes/produtos/card/Card'
+import Loading from "../../componentes/loading/Loading"
+
+import Head from '../../hooks/Head'
+
 const Produtos = () => {
 
 
@@ -33,28 +37,27 @@ const Produtos = () => {
                     return (
                               <>
                                         <Head title="Produtos" />
-                                        <div
-                                                  className={style.containerProd}>
+                                        <section
+                                                  className={style.containerProd + ' animeLeft'}>
 
                                                   {
 
                                                             data.map((item) => {
                                                                       return (
-                                                                                <ul key={item.id}>
+                                                                                <div key={item.id}>
 
                                                                                           <Card texto={item.nome}
                                                                                                     img={item.fotos[0].src}
                                                                                                     produto={item.id}
                                                                                           />
-
-                                                                                </ul>
+                                                                                </div>
 
 
                                                                       )
 
                                                             })
                                                   }
-                                        </div >
+                                        </section >
                               </>
                     )
 

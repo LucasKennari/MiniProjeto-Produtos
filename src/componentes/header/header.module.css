@@ -3,6 +3,7 @@
           margin-bottom: 2rem;
 }
 .header ul{
+          display: flex;
           padding:0px;
           margin: 0px;
           list-style: none;

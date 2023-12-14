@@ -1,14 +1,14 @@
 import React from 'react'
-import useFetch from '../hooks/useFetch'
+import useFetch from '../../hooks/useFetch'
 import { useParams } from 'react-router-dom'
-import ButtonCompra from '../componentes/PaginaProd/buttonCompra/ButtonCompra'
-import ButtonCarrinho from '../componentes/PaginaProd/buttonCarrinho/ButtonCarrinho'
-import ImgSlide from '../componentes/PaginaProd/imgSlide/ImgSlide'
-import Loading from '../componentes/loading/Loading'
-import DescricaoComp from '../componentes/PaginaProd/descricaoComponente/DescricaoComp'
-import PrecoComp from '../componentes/PaginaProd/PrecoComponente/PrecoComp'
-import TituloProdComp from '../componentes/PaginaProd/TituloProdComp/TituloProdComp'
-import Head from '../hooks/Head'
+import ButtonCompra from '../../componentes/PaginaProd/buttonCompra/ButtonCompra'
+import ButtonCarrinho from '../../componentes/PaginaProd/buttonCarrinho/ButtonCarrinho'
+import ImgSlide from '../../componentes/PaginaProd/imgSlide/ImgSlide'
+import Loading from '../../componentes/loading/Loading'
+import DescricaoComp from '../../componentes/PaginaProd/descricaoComponente/DescricaoComp'
+import PrecoComp from '../../componentes/PaginaProd/PrecoComponente/PrecoComp'
+import TituloProdComp from '../../componentes/PaginaProd/TituloProdComp/TituloProdComp'
+import Head from '../../hooks/Head'
 
 const Produto = () => {
           const params = useParams()

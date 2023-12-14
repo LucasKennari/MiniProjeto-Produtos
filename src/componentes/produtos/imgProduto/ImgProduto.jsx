@@ -1,7 +1,8 @@
 import React from 'react'
-import style from "../../../styleModule/style.module.css"
+import style from "./imgProduto.module.css"
 import { useNavigate } from 'react-router-dom'
 const ImgProduto = ({ img, produto }) => {
+
           const navigate = useNavigate()
           function handleClick(e) {
 

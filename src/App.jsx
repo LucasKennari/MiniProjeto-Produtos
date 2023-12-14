@@ -1,13 +1,14 @@
 import React from 'react'
-import { BrowserRouter, Route, Router, Routes, useParams } from "react-router-dom"
+import { BrowserRouter, Route, Routes, } from "react-router-dom"
 
 import './App.css'
-import Header from './componentes/header/Header'
 
-import Produtos from './Paginas/Produtos'
-import Produto from './Paginas/Produto'
-import Contato from './Paginas/Contato'
+import Header from './componentes/header/Header'
 import Footer from './componentes/footer/Footer'
+
+import Produtos from './Paginas/Produtos/Produtos'
+import Produto from './Paginas/Produto/Produto'
+import Contato from './Paginas/Contato/Contato'
 
 function App() {
 

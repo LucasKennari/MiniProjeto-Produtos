@@ -1,11 +1,11 @@
 import React from 'react'
-import style from "../../../styleModule/style.module.css"
+import style from "./Titulo.module.css"
 
 const Titulo = ({ texto }) => {
 
           return (
                     <>
-                              <h3 >{texto}</h3>
+                              <h3 className={style.nome}>{texto}</h3>
                     </>
           )
 }
