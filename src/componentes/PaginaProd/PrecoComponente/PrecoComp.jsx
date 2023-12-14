@@ -1,20 +1,11 @@
 import React from 'react'
+import style from "./preco.module.css"
 
 const PrecoComp = ({ preco }) => {
           return (
-                    <div style={{
-                              fontSize: "20px",
-                              fontWeight: 'bold',
-                              display: 'flex',
-                              marginTop: "10px",
-
-                              padding: "2px 10px 2px 10px",
-                              background: "#01C4FE",
-
-                              borderRadius: "5px"
-                    }}>
+                    <span className={style.preco}>
                               R$ {preco}
-                    </div>
+                    </span>
           )
 }
 

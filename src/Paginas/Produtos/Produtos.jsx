@@ -5,12 +5,10 @@ import style from "./produtos.module.css"
 import '../../App.css'
 
 import Card from '../../componentes/produtos/card/Card'
-import Loading from "../../componentes/loading/Loading"
 
 import Head from '../../hooks/Head'
 
 const Produtos = () => {
-
 
           const { data, loading, error, request } = useFetch()
           const url = "https://ranekapi.origamid.dev/json/api/produto/"
@@ -23,9 +21,7 @@ const Produtos = () => {
                     requestURL()
           }, [request])
 
-
-
-          if (loading) return (<Loading />)
+          if (loading) return (<div className={"loading"}>Loading...</div>)
 
           if (error) return (
                     <>

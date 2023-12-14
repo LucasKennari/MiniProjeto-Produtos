@@ -1,0 +1,21 @@
+.prodContainer{
+     
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2rem;
+                 
+
+     
+}
+.produtoContainer img{
+          margin-bottom: 2rem;
+}
+
+.buttonContainer{     
+          display: flex;
+          justify-Content: flex-end;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row-reverse;
+          
+}

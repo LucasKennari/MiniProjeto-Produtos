@@ -1,24 +1,27 @@
 import React from 'react'
 import useFetch from '../../hooks/useFetch'
 import { useParams } from 'react-router-dom'
-import ButtonCompra from '../../componentes/PaginaProd/buttonCompra/ButtonCompra'
-import ButtonCarrinho from '../../componentes/PaginaProd/buttonCarrinho/ButtonCarrinho'
-import ImgSlide from '../../componentes/PaginaProd/imgSlide/ImgSlide'
-import Loading from '../../componentes/loading/Loading'
-import DescricaoComp from '../../componentes/PaginaProd/descricaoComponente/DescricaoComp'
-import PrecoComp from '../../componentes/PaginaProd/PrecoComponente/PrecoComp'
-import TituloProdComp from '../../componentes/PaginaProd/TituloProdComp/TituloProdComp'
+
 import Head from '../../hooks/Head'
 
-const Produto = () => {
-          const params = useParams()
+import TituloProdComp from '../../componentes/PaginaProd/TituloProdComp/TituloProdComp'
 
+import ImgSlide from '../../componentes/PaginaProd/imgSlide/ImgSlide'
+import DescricaoComp from '../../componentes/PaginaProd/descricaoComponente/DescricaoComp'
+import PrecoComp from '../../componentes/PaginaProd/PrecoComponente/PrecoComp'
+
+import ButtonCompra from '../../componentes/PaginaProd/buttonCompra/ButtonCompra'
+import ButtonCarrinho from '../../componentes/PaginaProd/buttonCarrinho/ButtonCarrinho'
+
+import style from "./produto.module.css"
+
+const Produto = () => {
+          const { id } = useParams()
 
           const { data, error, loading, request } = useFetch()
-          React.useEffect(() => {
 
-          }, [])
-          let url = `https://ranekapi.origamid.dev/json/api/produto/${params.id}`
+          let url = `https://ranekapi.origamid.dev/json/api/produto/${id}`
+
           React.useEffect(() => {
                     async function RequestProd() {
                               const { resposta, json } = await request(url)
@@ -26,9 +29,9 @@ const Produto = () => {
                     }
                     RequestProd()
 
-          }, [request])
+          }, [request, url, id])
 
-          if (loading) return (<Loading />)
+          if (loading) return (<div className={"loading"}></div>)
 
           if (error) return (<div>{error}</div>)
 
@@ -36,39 +39,22 @@ const Produto = () => {
                     return (
                               <>
                                         <Head title={`Produto | ${data.nome}`} />
-                                        <div style={{
-                                                  display: "flex",
-                                                  padding: "0px 400px",
-                                                  gap: "40px",
-                                                  alignItems: "center",
-                                                  justifyContent: "center",
 
-                                        }}>
-                                                  <ImgSlide img={data.fotos[0].src} />
+                                        <section className={style.prodContainer + " animeLeft"}>
 
-                                                  <div style={{
-                                                            gap: "20px",
-                                                            display: "grid",
-                                                            padding: "10px",
-                                                            justifyItems: "start"
-                                                  }}>
-                                                            <div style={{
-                                                                      display: "flex", flexWrap: 'wrap',
+                                                  <div>
+                                                            <ImgSlide img={data.fotos[0].src} />
+                                                  </div>
 
+                                                  <div className={style.descContainer}>
 
-                                                            }}>
+                                                            <div   >
                                                                       <TituloProdComp texto={data.nome} />
-                                                                      <DescricaoComp texto={data.descricao} />
                                                                       <PrecoComp preco={data.preco} />
+                                                                      <DescricaoComp texto={data.descricao} />
                                                             </div>
 
-                                                            <div style={{
-                                                                      display: "flex",
-                                                                      justifyContent: "flex-end",
-                                                                      alignItems: "center",
-
-
-                                                            }}>
+                                                            <div className={style.buttonContainer}>
                                                                       <ButtonCompra />
                                                                       <ButtonCarrinho />
                                                             </div>
@@ -76,7 +62,7 @@ const Produto = () => {
                                                   </div>
 
 
-                                        </div>
+                                        </section>
                               </>
                     )
           }

@@ -3,7 +3,7 @@ import styles from "../footer/footer.module.css"
 const Footer = () => {
           return (
                     <div className={styles.footer}>
-                              <h1>Footer</h1>
+                              <p>Exercicio de React - Origamid </p>
                     </div>
           )
 }

@@ -1,14 +1,10 @@
 import React from 'react'
-
+import style from "./descricao.module.css"
 const DescricaoComp = ({ texto }) => {
           return (
-                    <div style={{
-                              fontSize: "20px",
-                              display: 'flex',
-                              margin: "30px 0px 30px 0px"
-                    }}>
+                    <p className={style.descricao}>
                               {texto}
-                    </div>
+                    </p>
           )
 }
 

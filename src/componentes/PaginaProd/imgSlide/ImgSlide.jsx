@@ -1,18 +1,10 @@
 import React from 'react'
+import style from "./ImgSlide.module.css"
 
 const ImgSlide = ({ img }) => {
           return (<>
-                    <div style={{
-                              gap: "10px",
-
-                              display: "flex",
-                              width: "400px",
-
-                              height: "500px",
-                              justifyContent: "center",
-                              alignItems: "center"
-                    }}>
-                              <img src={img} alt="" style={{ height: "400px" }} />
+                    <div className={style.imgSide}>
+                              <img src={img} alt="" />
                     </div>
           </>
           )
