@@ -4,14 +4,24 @@ import style from "../../styleModule/style.module.css"
 import "../../styleModule/Header.css"
 const Header = () => {
           return (
-                    <div className={style.display}>
-                              <section className={style.display2} >
-                                        <NavLink to="" end className={style.header}>Produtos </NavLink>
-
-                                        <NavLink to="contato" className={style.header}>Contato </NavLink>
-                              </section>
-                    </div>
+                    <nav className={style.header}>
+                              <ul>
+                                        <li>
+                                                  <NavLink to="/" end className={style.link}>Produtos </NavLink>
+                                        </li>
+                                        <li>
+                                                  <NavLink to="contato" className={style.link}>Contato </NavLink>
+                                        </li>
+                              </ul>
+                    </nav>
           )
 }
 
+{/* <div className={style.display}>
+<section className={style.display2} >
+          <NavLink to="" end className={style.header}>Produtos </NavLink>
+
+          <NavLink to="contato" className={style.header}>Contato </NavLink>
+</section>
+</div> */}
 export default Header

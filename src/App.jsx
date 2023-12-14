@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Router, Routes, useParams } from "react-router-dom"
 
-import style from "./styleModule/style.module.css"
-
+import './App.css'
 import Header from './componentes/header/Header'
 
 import Produtos from './Paginas/Produtos'
@@ -12,17 +11,22 @@ import Contato from './Paginas/Contato'
 function App() {
 
           return (
-                    <>
+                    <div className='App'>
+
                               <BrowserRouter>
                                         <Header />
-                                        <Routes>
-                                                  <Route path='/' element={<Produtos />}></Route>
-                                                  <Route path="/produto/:id" element={<Produto />}></Route>
-                                                  <Route path='contato' element={<Contato />}></Route>
+                                        <div className='content'>
 
-                                        </Routes>
+                                                  <Routes>
+                                                            <Route path='/' element={<Produtos />}></Route>
+                                                            <Route path="/produto/:id" element={<Produto />}></Route>
+                                                            <Route path='contato' element={<Contato />}></Route>
+
+                                                  </Routes>
+                                        </div>
                               </BrowserRouter>
-                    </>
+                    </div>
+
           )
 
 
