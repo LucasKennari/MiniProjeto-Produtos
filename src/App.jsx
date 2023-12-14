@@ -7,6 +7,7 @@ import Header from './componentes/header/Header'
 import Produtos from './Paginas/Produtos'
 import Produto from './Paginas/Produto'
 import Contato from './Paginas/Contato'
+import Footer from './componentes/footer/Footer'
 
 function App() {
 
@@ -21,9 +22,10 @@ function App() {
                                                             <Route path='/' element={<Produtos />}></Route>
                                                             <Route path="/produto/:id" element={<Produto />}></Route>
                                                             <Route path='contato' element={<Contato />}></Route>
-
                                                   </Routes>
+
                                         </div>
+                                        <Footer />
                               </BrowserRouter>
                     </div>
 
