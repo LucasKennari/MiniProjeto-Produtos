@@ -7,8 +7,8 @@ const ButtonCarrinho = () => {
                               display: "flex",
 
                     }}>
-                              <button className={style.buttonCarrinho}
-                              >Adicionar <ImgCarrinho img={"/src/img/carrinho-de-compras.png"} /></button>
+                              <button disabled className={style.buttonCarrinho}
+                              >Adicionar <ImgCarrinho img={"https://imgur.com/OKIVvl1.png"} /></button>
 
                     </div>
           )

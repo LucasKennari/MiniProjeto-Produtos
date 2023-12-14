@@ -8,7 +8,7 @@ const ButtonCompra = () => {
 
                     }}>
 
-                              <button className={style.buttonComprar}>Comprar</button>
+                              <button disabled className={style.buttonComprar}>Comprar</button>
                     </div>
           )
 }
